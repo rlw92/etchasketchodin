@@ -1,0 +1,6 @@
+body{display:flex;justify-content:center;}
+.main{border:solid black 1px;
+    margin:20px;
+    display:flex;
+    flex-wrap:wrap;
+}
