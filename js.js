@@ -23,13 +23,29 @@ mw.style.width = mww+"px";
 let loop = s**2;
 
 
-
 for(i=0;i<loop;i++){
 let div = document.createElement("div");
 div.className="grids";
 div.style.cssText ="border:solid 1px black;flex:auto;padding:10px";
+let grids = document.querySelectorAll(".grids");
+
 main.appendChild(div);
-
-
 }
+
+    let color = "green";
+    let grids = document.querySelectorAll(".grids");
+for (let i = 0; i < grids.length; i++) {
+   grids[i].addEventListener("mouseover",()=>{grids[i].style.cssText = "border:solid 1px black;flex:auto;padding:10px;background-color:" + color});
+  }
+
+
+
+
+
+
+//grids[i].addEventListener("mouseover",()=>{grids[i].style.cssText ="border:solid 1px black;flex:auto;padding:10px;background-color:black;";});//
+//grids.addEventListener("mouseover",()=>{grids.style.cssText ="border:solid 1px black;flex:auto;padding:10px;background-color:black;";})//
+
+
+
 

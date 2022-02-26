@@ -1,4 +1,5 @@
-body{display:flex;justify-content:center;}
+body{display:flex;flex-direction:column;align-items:center;}
+.controls{}
 .main{border:solid black 1px;
     margin:20px;
     display:flex;
