@@ -4,4 +4,7 @@ body{display:flex;flex-direction:column;align-items:center;}
     margin:20px;
     display:flex;
     flex-wrap:wrap;
+
+    width:472px;
+    
 }

@@ -14,19 +14,27 @@ altered in the web page*/
 
 //let s be the amount you want, 7 for example would be a 7*7 grid//
 let s = 16;
+/* commented out to try create a fixed width window
 //mww can be main window width//
-let mww = 2*(11*s);
+let mww = 2*(11*s); */
 // mw is gonna access main window of the grid
 let mw = document.querySelector(".main");
-mw.style.width = mww+"px";
+//mw.style.width = mww+"px";
+mainWidth = 350 
+mw.style.width = mainWidth +"px";
+
+
 //loop can be the total amount of boxes needed so s*s or ://
 let loop = s**2;
+
+//padding is the size of the squares keep in mind the 1px for the border, mainWidth is the current width of the main//
+padding = (mainWidth/2)/s-1;
 
 
 for(i=0;i<loop;i++){
 let div = document.createElement("div");
 div.className="grids";
-div.style.cssText ="border:solid 1px black;flex:auto;padding:10px";
+div.style.cssText ="border:solid 1px black;flex:auto;padding:" + padding + "px";
 main.appendChild(div);
 }
 
@@ -35,7 +43,7 @@ main.appendChild(div);
     let color = "red";
     let grids = document.querySelectorAll(".grids");
 for (let i = 0; i < grids.length; i++) {
-   grids[i].addEventListener("mouseover",()=>{grids[i].style.cssText = "border:solid 1px black;flex:auto;padding:10px;background-color:" + color});
+   grids[i].addEventListener("mouseover",()=>{grids[i].style.cssText = "border:solid 1px black;flex:auto;padding:" + padding + "px;background-color:" + color});
   }
 
   //a function to change the color of the hovered squares//
