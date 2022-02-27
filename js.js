@@ -78,7 +78,8 @@ paint();}
 //function to clear the grid and input the amount of squares going across and down
 function sizing(){
   del();
-  s=+prompt("ENTER HOW MANY SQUARES IN EACH ROW AND COLUMN YOU NEED");  
+  s=+prompt("ENTER HOW MANY SQUARES IN EACH ROW AND COLUMN YOU NEED");
+  if(s>50){alert("Apologies but the squares must be below 50*50. Please pick a smaller number");s=16;}  
   create();
   paint();
    }
